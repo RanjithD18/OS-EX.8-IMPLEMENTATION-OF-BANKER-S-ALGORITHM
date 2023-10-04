@@ -17,14 +17,23 @@ Calculate the need matrix by subtracting the alloc matrix from the max matrix fo
 ### Step 4: Main Loop
 -> Loop k from 0 to 4 (5 iterations, one for each process).
 ->Inside the loop:
+
 Loop through each process i (0 to 4).
+
 Check if process i is not finished (f[i] == 0).
+
 Initialize flag to 0.
+
 Loop through each resource type j (0 to 2).
+
 Check if the resource need of process i for resource j exceeds the available resource avail[j].
+
 If it does, set flag to 1 and break out of the inner loop.
+
 If flag is still 0 (i.e., all resource needs are satisfied), add process i to the ans array and increment ind.
+
 Update the available resources by adding the allocated resources of process i to avail.
+
 Mark process i as finished by setting f[i] to 1.
 ### Step 5: Print the SAFE Sequence
 -> Print "Following is the SAFE Sequence" as a header.
